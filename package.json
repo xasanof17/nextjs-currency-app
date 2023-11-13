@@ -1,9 +1,9 @@
 {
-  "name": "next-template",
-  "version": "0.0.2",
+  "name": "nextjs-currency-app",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "lucide-react": "0.105.0-alpha.4",
@@ -40,6 +41,7 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.5"
   }
