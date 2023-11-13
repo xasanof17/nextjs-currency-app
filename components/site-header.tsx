@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState } from "react"
 import { siteConfig } from "@/config/site"
 import {  buttonVariants } from "@/components/ui/button"
@@ -50,7 +50,7 @@ export function SiteHeader() {
             <button  className={buttonVariants({
                   size: "icon",
                   variant: "ghost",
-                  className: 'sm:hidden block'
+                  className: "sm:hidden block"
                 })} onClick={() => setToggleMenu(prev => !prev)}>
 {toggleMenu ? (
   <XIcon className="sm:hidden block h-6 w-6 fill-current" />
