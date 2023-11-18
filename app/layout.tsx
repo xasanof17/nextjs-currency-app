@@ -13,7 +13,21 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: "Currency Converter",
+    images: [
+      {
+        url: `/opengrapg-image.jpg`,
+        width: 1920,
+        height: 500,
+        type: "image/jpg",
+      },
+    ],
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
