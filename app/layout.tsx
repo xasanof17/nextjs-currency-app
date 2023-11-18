@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Currency Converter",
     images: [
       {
-        url: `/opengrapg-image.jpg`,
+        url: `/opengraph-image.jpg`,
         width: 1920,
         height: 500,
         type: "image/jpg",
