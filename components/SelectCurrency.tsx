@@ -11,11 +11,10 @@ type Props = {
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
   options: string[];
-  label: string;
 };
 
 const SelectCurrency = (props: Props) => {
-  const { value, setValue, options, label } = props;
+  const { value, setValue, options } = props;
 
   return (
     <Select onValueChange={(newValue) => setValue(newValue)}>

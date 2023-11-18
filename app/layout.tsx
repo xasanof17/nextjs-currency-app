@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Footer from "@/components/Footer";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeToggle from "@/components/theme-toggle";
 import { siteConfig } from "@/config/site";
 import CurrencyProvider from "@/context/CurrencyProvider";
 import { fontSans } from "@/lib/fonts";
@@ -52,7 +53,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <CurrencyProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              {children}
+              <section className="flex min-h-screen flex-1 items-center justify-center">
+                <div className="fixed right-4 top-4">
+                  <ThemeToggle />
+                </div>
+                {children}
+              </section>
               <TailwindIndicator />
               <Footer />
             </ThemeProvider>

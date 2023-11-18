@@ -12,7 +12,7 @@ export default function NotFound() {
           Something&apos;s missing.
         </p>
         <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-          Sorry, we cand&apos;t find that page. You&apos;ll find lots to explore
+          Sorry, we can&apos;t find that page. You&apos;ll find lots to explore
           on the home page.{" "}
         </p>
         <Link href="/" className={buttonVariants()}>

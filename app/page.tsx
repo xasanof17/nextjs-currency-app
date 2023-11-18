@@ -77,57 +77,50 @@ export default function HomePage() {
   };
 
   return (
-    <section className="flex min-h-screen flex-1 items-center justify-center">
-      <div className="fixed right-4 top-4">
-        <ThemeToggle />
-      </div>
-      <div className="mx-4 w-full max-w-3xl rounded-xl bg-slate-100 px-3 py-5 dark:bg-slate-900 md:p-10">
-        {!loaded ? (
-          <>
-            <h1 className="text-center text-xl font-semibold tracking-normal sm:text-2xl">
-              Stay Ahead with Accurate Conversions
-            </h1>
-            <form
-              onSubmit={handleExchangeSubmit}
-              onChange={handleExchangeSubmit}
-              className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-4"
-            >
-              <InputAmount
-                firstAmount={firstAmount}
-                setFirstAmount={setFirstAmount}
-              />
-              <SelectCurrency
-                value={fromCurrency}
-                options={currencies}
-                setValue={setFromCurrency}
-                label="salom"
-              />
-              <SwitchCurrency
-                fromCurrency={fromCurrency}
-                setFromCurrency={setFromCurrency}
-                toCurrency={toCurrency}
-                setToCurrency={setToCurrency}
-              />
-              <SelectCurrency
-                value={toCurrency}
-                options={currencies}
-                setValue={setToCurrency}
-                label="salom"
-              />
-            </form>
-          </>
-        ) : (
-          <Skeleton className="h-full w-full p-10" />
-        )}
-        {exchangeRate && (
-          <h2 className="mt-4 flex flex-col text-center md:text-start">
-            <span className="text-base font-semibold text-foreground">
-              {firstAmount} {fromCurrency} =
-            </span>
-            <span className="tabuler-nums text-3xl font-bold tracking-tight text-foreground sm:tracking-wide">{`${exchangeRate} ${toCurrency}`}</span>
-          </h2>
-        )}
-      </div>
-    </section>
+    <div className="mx-4 w-full max-w-3xl rounded-xl bg-slate-100 px-3 py-5 dark:bg-slate-900 md:p-10">
+      {!loaded ? (
+        <>
+          <h1 className="text-center text-xl font-semibold tracking-normal sm:text-2xl">
+            Stay Ahead with Accurate Conversions
+          </h1>
+          <form
+            onSubmit={handleExchangeSubmit}
+            onChange={handleExchangeSubmit}
+            className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-4"
+          >
+            <InputAmount
+              firstAmount={firstAmount}
+              setFirstAmount={setFirstAmount}
+            />
+            <SelectCurrency
+              value={fromCurrency}
+              options={currencies}
+              setValue={setFromCurrency}
+            />
+            <SwitchCurrency
+              fromCurrency={fromCurrency}
+              setFromCurrency={setFromCurrency}
+              toCurrency={toCurrency}
+              setToCurrency={setToCurrency}
+            />
+            <SelectCurrency
+              value={toCurrency}
+              options={currencies}
+              setValue={setToCurrency}
+            />
+          </form>
+        </>
+      ) : (
+        <Skeleton className="h-full w-full p-10" />
+      )}
+      {exchangeRate && (
+        <h2 className="mt-4 flex flex-col text-center md:text-start">
+          <span className="text-base font-semibold text-foreground">
+            {firstAmount} {fromCurrency} =
+          </span>
+          <span className="tabuler-nums text-3xl font-bold tracking-tight text-foreground sm:tracking-wide">{`${exchangeRate} ${toCurrency}`}</span>
+        </h2>
+      )}
+    </div>
   );
 }

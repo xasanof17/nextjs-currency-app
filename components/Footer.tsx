@@ -18,7 +18,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-5 right-0 left-0 lg:left-auto lg:right-4">
+    <div className="fixed bottom-5 right-0 left-0 lg:left-auto lg:right-4 z-10">
       <ul className="flex flex-row items-center justify-center space-x-3 lg:flex-col lg:space-x-0 lg:space-y-3">
         {socials.map(({ href, Icon }, i) => (
           <li key={i}>
