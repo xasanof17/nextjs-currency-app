@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Universal Currency Converter: Instantly Convert Between Any Currencies",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Unlock the power of universal currency conversion with our app. Seamlessly switch between any currencies, get real-time exchange rates, and make transactions effortlessly. The ultimate tool for international travel, online shopping, and financial planning. Download now for a world of currency possibilities.",
   mainNav: [
     {
       title: "Home",
@@ -15,8 +15,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    twitter: "https://twitter.com/xasanof17",
+    github: "https://github.com/xasanof17",
     docs: "https://ui.shadcn.com",
   },
 }
