@@ -52,10 +52,10 @@ export default function CurrenciesPage() {
   };
 
   return (
-    <div className="w-full max-w-3xl z-10 rounded-none md:rounded-xl bg-slate-100 px-4 pb-16 md:pb-5 dark:bg-slate-900 md:p-10">
+    <div className="w-full max-w-3xl mx-3 z-10 rounded-none md:rounded-xl bg-slate-100 px-4 pb-16 md:pb-10 dark:bg-slate-900 md:p-10">
       {!loaded ? (
         <>
-          <div className="flex flex-col sticky top-0 left-0 bg-inherit py-3 md:py-2 mt-3">
+          <div className="flex flex-col sticky top-0 left-0 bg-inherit py-3 md:py-2">
             <div className="flex items-center justify-between mb-3">
               <h1 className="text-lg text-foreground font-bold">
                 Base Currencies
